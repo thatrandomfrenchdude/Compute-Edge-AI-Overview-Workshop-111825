@@ -1,6 +1,6 @@
 # American Airlines Edge AI Workshop
 
-Host: Nick Debeurre
+Host: Nick Debeurre<br>
 Date: 11-18-2025
 
 ## Workshop Overview
