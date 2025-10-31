@@ -7,21 +7,35 @@ if [[ "$choice" != "y" && "$choice" != "Y" ]]; then
 fi
 
 # Create directories
-mkdir -p examples/{agent,rl,transcription,pose_estimation}
+mkdir examples
+cd examples
 
 # Change to each directory and clone the repository
-cd examples/agent
 git clone https://github.com/thatrandomfrenchdude/local-agent.git
+cd local-agent
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 
-cd ../rl
+cd ..
 git clone https://github.com/thatrandomfrenchdude/cart-pole-ppo.git
+cd cart-pole-ppo
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 
-cd ../transcription
+cd ..
 git clone https://github.com/thatrandomfrenchdude/simple-whisper-transcription.git
+cd simple-whisper-transcription
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 
-cd ../pose_estimation
-if ! git clone https://github.com/your-repo/pose_estimation.git; then
-    echo "add the correct link"
-fi
+# cd ..
+# if ! git clone https://github.com/your-repo/pose_estimation.git; then
+#     echo "add the correct link"
+# fi
+
+cd ../..
 
 echo "Setup completed successfully. Have fun exploring!"
