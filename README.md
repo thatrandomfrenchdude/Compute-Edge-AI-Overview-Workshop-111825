@@ -13,8 +13,13 @@ This workshop is designed to introduce participants to the fundamentals of edge 
 - **11:45 AM - 12:00 PM**: Demo Walkthroughs
 - **12:00 PM - 1:00 PM**: Lunch Break
 - **1:00 PM - 2:40 PM**: Hands-On Labs
-  - Track 1: NPU Chatbot
-  - Track 2: Local Agent
+  - Track 1: NPU Agent --> was NPU Chatbot
+  - Track 2: RL --> was Local Agent
   - Track 3: Live Transcription
   - Track 4: Pose Estimation
 - **2:30 PM - 3:00 PM**: Wrap-Up, Q&A, and Feedback
+
+## Workshop Setup
+Run the correct setup script for your machine:
+- For Windows: `.\setup\setup_windows.ps1`
+- For Linux/MacOS: `./setup/setup_shell.sh`
