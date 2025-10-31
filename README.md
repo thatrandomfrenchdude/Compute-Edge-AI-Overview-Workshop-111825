@@ -3,7 +3,7 @@
 Host: Nick Debeurre<br>
 Date: 11-18-2025
 
-## Workshop Overview
+## Overview
 This workshop is designed to introduce participants to the fundamentals of edge AI, focusing on practical applications and hands-on experience. Participants will learn how to deploy AI models on edge devices, optimize performance, and integrate with cloud services through the lens of the Snapdragon X Elite.
 
 ## Schedule
@@ -19,7 +19,7 @@ This workshop is designed to introduce participants to the fundamentals of edge 
   - Track 4: Pose Estimation
 - **2:30 PM - 3:00 PM**: Wrap-Up, Q&A, and Feedback
 
-## Workshop Setup
+## Setup
 Run the correct setup script for your machine:
 - For Windows: `.\setup\setup_windows.ps1`
 - For Linux/MacOS: `./setup/setup_shell.sh`
