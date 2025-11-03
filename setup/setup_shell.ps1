@@ -7,6 +7,11 @@ if ($choice -ne "y" -and $choice -ne "Y") {
     exit 1
 }
 
+# Setup Workflow
+# 1. Clone the repository
+# 2. Setup the virtual environment
+# 3. Deactivate and return to the root
+
 # Create 'examples' directory and move into it
 New-Item -ItemType Directory -Force -Path "examples" | Out-Null
 Set-Location "examples"
@@ -31,6 +36,9 @@ if (Test-Path "requirements.txt") {
 if (Test-Path "requirements-test.txt") {
     pip install -r requirements-test.txt
 }
+# special handling for onnxruntime-qnn on Windows
+pip uninstall onnxruntime
+pip install onnxruntime-qnn
 deactivate
 Set-Location ".."
 

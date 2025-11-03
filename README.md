@@ -22,7 +22,7 @@ This workshop is designed to introduce participants to the fundamentals of edge 
 ## Setup
 This process configures your development environment for the workshop by cloning samples and installing necessary dependencies.
 
-Run the correct setup script for your machine:
+Run the correct setup script for your machine **from the root directory**:
 - For Windows:
 
     ```powershell
@@ -33,4 +33,6 @@ Run the correct setup script for your machine:
     ```sh
     chmod +x ./setup/setup_shell.sh
     ./setup/setup_shell.sh
+
+    # Note: NPU packages will not work without Windows. Repos will be clonded, but some virtual environments may fail to set up.
     ```

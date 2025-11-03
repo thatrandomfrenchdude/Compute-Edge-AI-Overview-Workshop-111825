@@ -39,8 +39,8 @@ git clone https://github.com/thatrandomfrenchdude/simple-whisper-transcription.g
 cd simple-whisper-transcription
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
 deactivate
+echo "Whisper Transcription requirements not installed due to some Windows specific packages. Please install manually."
 cd ..
 
 # cd ..
