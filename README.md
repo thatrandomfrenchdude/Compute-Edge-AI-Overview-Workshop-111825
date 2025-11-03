@@ -1,10 +1,10 @@
-# American Airlines Edge AI Workshop
+# Compute Edge AI Overview Workshop
 
 Host: Nick Debeurre<br>
 Date: 11-18-2025
 
 ## Overview
-This workshop is designed to introduce participants to the fundamentals of edge AI, focusing on practical applications and hands-on experience. Participants will learn how to deploy AI models on edge devices, optimize performance, and integrate with cloud services through the lens of the Snapdragon X Elite.
+This workshop is designed to introduce participants to the fundamentals of edge AI, focusing on practical applications and hands-on experience. Participants will learn how to deploy AI models on edge devices and optimize performance through the lens of the Snapdragon X Elite.
 
 ## Schedule
 - **10:00 AM - 10:15 AM**: Intro/Setup/Welcome
