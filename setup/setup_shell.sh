@@ -28,18 +28,13 @@ cd ..
 git clone https://github.com/thatrandomfrenchdude/cart-pole-ppo.git
 cd cart-pole-ppo
 python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt  # base reqs
-pip install -r requirements-test.txt  # test reqs
-deactivate
+echo "Cart Pole RL requirements not installed due to some Windows specific packages. Please install manually."
 cd ..
 
 # Whisper Transcription
 git clone https://github.com/thatrandomfrenchdude/simple-whisper-transcription.git
 cd simple-whisper-transcription
 python3 -m venv venv
-source venv/bin/activate
-deactivate
 echo "Whisper Transcription requirements not installed due to some Windows specific packages. Please install manually."
 cd ..
 
