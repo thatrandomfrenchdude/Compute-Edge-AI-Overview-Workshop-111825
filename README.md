@@ -13,8 +13,8 @@ This workshop is designed to introduce participants to the fundamentals of edge 
 - **11:45 AM - 12:00 PM**: Demo Walkthroughs
 - **12:00 PM - 1:00 PM**: Lunch Break
 - **1:00 PM - 2:40 PM**: Hands-On Labs
-  - Track 1: NPU Agent
-  - Track 2: Reinforcement Learning
+  - Track 1: Local Agent
+  - Track 2: Cart-Pole
   - Track 3: Live Transcription
   - Track 4: Pose Estimation
 - **2:30 PM - 3:00 PM**: Wrap-Up, Q&A, and Feedback
@@ -34,5 +34,5 @@ Run the correct setup script for your machine **from the root directory**:
     chmod +x ./setup/setup_shell.sh
     ./setup/setup_shell.sh
 
-    # Note: NPU packages will not work without Windows. Repos will be clonded, but some virtual environments may fail to set up.
+    # Note: NPU packages will not work without Windows. Repos will be clonded, no setup included.
     ```

@@ -37,8 +37,9 @@ if (Test-Path "requirements-test.txt") {
     pip install -r requirements-test.txt
 }
 # special handling for onnxruntime-qnn on Windows
-pip uninstall onnxruntime
-pip install onnxruntime-qnn
+$venvPip = ".\venv\Scripts\pip.exe"
+& $venvPip uninstall onnxruntime -y
+& $venvPip install onnxruntime-qnn
 deactivate
 Set-Location ".."
 
