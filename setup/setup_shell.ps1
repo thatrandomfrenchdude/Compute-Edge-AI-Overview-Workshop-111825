@@ -1,4 +1,5 @@
 # This script will create the necessary directories for the workshop.
+$startTime = Get-Date
 Write-Host "This script will create the necessary directories for the workshop."
 $choice = Read-Host "Do you want to continue? (y/n)"
 if ($choice -ne "y" -and $choice -ne "Y") {
@@ -6,27 +7,52 @@ if ($choice -ne "y" -and $choice -ne "Y") {
     exit 1
 }
 
-# Create directories
-New-Item -ItemType Directory -Force -Path "examples/agent" | Out-Null
-New-Item -ItemType Directory -Force -Path "examples/rl" | Out-Null
-New-Item -ItemType Directory -Force -Path "examples/transcription" | Out-Null
-New-Item -ItemType Directory -Force -Path "examples/pose_estimation" | Out-Null
+# Create 'examples' directory and move into it
+New-Item -ItemType Directory -Force -Path "examples" | Out-Null
+Set-Location "examples"
 
-# Change to each directory and clone the repository
-Set-Location "examples/agent"
+# Local Agent
 git clone https://github.com/thatrandomfrenchdude/local-agent.git
+Set-Location "local-agent"
+python -m venv venv
+& "venv\Scripts\Activate.ps1"
+pip install openai httpx pyyaml requests pytest
+deactivate
+Set-Location ".."
 
-Set-Location "../rl"
+# Cart Pole Reinforcement Learning
 git clone https://github.com/thatrandomfrenchdude/cart-pole-ppo.git
-
-Set-Location "../transcription"
-git clone https://github.com/thatrandomfrenchdude/simple-whisper-transcription.git
-
-Set-Location "../pose_estimation"
-try {
-    git clone https://github.com/your-repo/pose_estimation.git
-} catch {
-    Write-Host "add the correct link"
+Set-Location "cart-pole-ppo"
+python -m venv venv
+& "venv\Scripts\Activate.ps1"
+if (Test-Path "requirements.txt") {
+    pip install -r requirements.txt
 }
+if (Test-Path "requirements-test.txt") {
+    pip install -r requirements-test.txt
+}
+deactivate
+Set-Location ".."
 
+# Whisper Transcription
+git clone https://github.com/thatrandomfrenchdude/simple-whisper-transcription.git
+Set-Location "simple-whisper-transcription"
+python -m venv venv
+& "venv\Scripts\Activate.ps1"
+if (Test-Path "requirements.txt") {
+    pip install -r requirements.txt
+}
+deactivate
+Set-Location ".."
+
+# Pose Estimation (commented out)
+# if (!(git clone https://github.com/your-repo/pose_estimation.git)) {
+#     Write-Host "add the correct link"
+# }
+
+# Return to workshop root
+Set-Location ".."
+$endTime = Get-Date
+$elapsed = $endTime - $startTime
 Write-Host "Setup completed successfully. Have fun exploring!"
+Write-Host ("Elapsed time: {0}" -f $elapsed.ToString())
