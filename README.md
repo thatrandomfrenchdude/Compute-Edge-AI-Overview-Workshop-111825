@@ -1,6 +1,4 @@
 # Compute Edge AI Overview Workshop
-
-Host: Nick Debeurre<br>
 Date: 11-18-2025
 
 ## Overview
