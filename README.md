@@ -22,7 +22,7 @@ This workshop is designed to introduce participants to the fundamentals of edge 
 ## Setup
 This process configures your development environment for the workshop by cloning samples and installing necessary dependencies.
 
-Run the correct setup script for your machine **from the root directory**:
+Run the correct setup script for your machine **from the repo root directory**:
 - For Windows:
 
     ```powershell
