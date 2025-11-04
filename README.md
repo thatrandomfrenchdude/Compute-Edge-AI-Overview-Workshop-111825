@@ -14,7 +14,7 @@ This workshop is designed to introduce participants to the fundamentals of edge 
   - Track 1: Local Agent
   - Track 2: Cart-Pole
   - Track 3: Live Transcription
-  <!-- - Track 4: Pose Estimation -->
+  - Track 4: Pose Estimation
 - **2:30 PM - 3:00 PM**: Wrap-Up, Q&A, and Feedback
 
 ### Setup

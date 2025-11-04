@@ -54,10 +54,20 @@ if (Test-Path "requirements.txt") {
 deactivate
 Set-Location ".."
 
-# Pose Estimation (commented out)
-# if (!(git clone https://github.com/your-repo/pose_estimation.git)) {
-#     Write-Host "add the correct link"
-# }
+# Pose Estimation
+git clone https://github.com/thatrandomfrenchdude/pose-detector.git
+Set-Location "pose-detector"
+python -m venv venv
+& "venv\Scripts\Activate.ps1"
+if (Test-Path "requirements.txt") {
+    pip install -r requirements.txt
+}
+# special handling for onnxruntime-qnn on Windows
+$venvPip = ".\venv\Scripts\pip.exe"
+& $venvPip uninstall onnxruntime -y
+& $venvPip install onnxruntime-qnn
+deactivate
+Set-Location ".."
 
 # Return to workshop root
 Set-Location ".."

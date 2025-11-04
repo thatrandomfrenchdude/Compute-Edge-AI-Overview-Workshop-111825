@@ -38,10 +38,12 @@ python3 -m venv venv
 echo "Whisper Transcription requirements not installed due to some Windows specific packages. Please install manually."
 cd ..
 
-# cd ..
-# if ! git clone https://github.com/your-repo/pose_estimation.git; then
-#     echo "add the correct link"
-# fi
+# Pose Estimation
+git clone https://github.com/thatrandomfrenchdude/pose-detector.git
+cd pose-detector
+python3 -m venv venv
+echo "Pose Estimation requirements not installed due to some Windows specific packages. Please install manually."
+cd ..
 
 # return to workshop root
 cd ..
