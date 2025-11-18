@@ -23,7 +23,7 @@ This process configures your development environment for the workshop by cloning
 1. Clone the repository:
 
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/thatrandomfrenchdude/Compute-Edge-AI-Overview-Workshop-111825.git
     ```
 2. Run the correct setup script for your machine **from the repo root directory**:
     - For Windows:
